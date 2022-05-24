@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/jacob_poltel_icon_pic">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#FF0000"
+    android:text="Welcom to Poltel"
+    android:fontFamily="sans-serif-condensed"
+    android:textSize="100px"
+    android:gravity="center"
+    android:layout_marginTop="30px"/>
+
+<Button
+    android:layout_width="600px"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:textSize="30px"
+    android:textColor="@color/black"
+    app:backgroundTint="@null"
+    android:background="@drawable/rounded_corner"
+    android:text="Start Game"
+    android:layout_marginTop="900px"
+    android:id="@+id/btnStart"
+    >
+</Button>
+
+<Button
+    android:layout_width="600px"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:textSize="30px"
+    android:textColor="@color/black"
+    app:backgroundTint="@null"
+    android:background="@drawable/rounded_corner"
+    android:text="A Little Bit About The Game"
+    android:layout_marginTop="80px"
+    android:id="@+id/btnAboutGame"
+    >
+</Button>
+
+</LinearLayout>

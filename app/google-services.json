@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "130184387693",
+    "project_id": "mypoltel",
+    "storage_bucket": "mypoltel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130184387693:android:c9112987fe5b046be57364",
+        "android_client_info": {
+          "package_name": "com.example.mypoltel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130184387693-06ocj4mi6otsrg77qkbjuolgv9cfbdp7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKGwXT3i63FEUdn5y2I3KJUhMPMkju4Y0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130184387693-06ocj4mi6otsrg77qkbjuolgv9cfbdp7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

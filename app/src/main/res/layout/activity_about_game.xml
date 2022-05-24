@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:text="About The Game"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="100px"
+        android:gravity="center"
+        android:layout_marginTop="30px"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50px"
+        android:textColor="@color/black"
+        android:text="The game was created by an NBA fan who wanted to challenge other
+basketball fans to see who has the most impressive knowledge about the NBA.\n\nSince
+than millions has played the game but no one could outdo the creator in NBA knowledge.
+If you think you have the ability to be the one to outdo the creator start playing
+right now and public your achievement!\n\nGood luck!"
+        android:layout_marginTop="300px"
+        >
+    </TextView>
+
+    <Button
+        android:layout_width="600px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="30px"
+        android:textColor="@color/black"
+        app:backgroundTint="@null"
+        android:background="@drawable/rounded_corner"
+        android:text="Back To Main Menu"
+        android:layout_marginTop="400px"
+        android:id="@+id/btnBackToMainMenu"></Button>
+
+</LinearLayout>
