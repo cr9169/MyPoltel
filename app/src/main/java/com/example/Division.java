@@ -1,4 +1,4 @@
-package com.example.mypoltel;
+package com.example;
 
 /**
  * Player's team division

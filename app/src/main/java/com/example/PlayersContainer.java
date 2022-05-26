@@ -1,4 +1,4 @@
-package com.example.mypoltel;
+package com.example;
 
 import java.util.HashMap;
 
