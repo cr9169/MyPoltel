@@ -1,6 +1,13 @@
 package com.example;
 
+import static com.example.Position.C;
+import static com.example.Position.PF;
+import static com.example.Position.PG;
+import static com.example.Position.SF;
+import static com.example.Position.SG;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -82,7 +89,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     HashMap<String, NbaPlayer> players = new HashMap<String, NbaPlayer>();
 
-    boolean isWinner = false;
+    int countGuesses = 0;
 
     @SuppressLint("ResourceAsColor")
     @Override
@@ -147,26 +154,15 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         guess7Square6 = findViewById(R.id.guess7Square6);
         guess7Square7 = findViewById(R.id.guess7Square7);
 
-        /*
-        guess1Square1.setBackgroundColor(ContextCompat.getColor(this, R.color.red));
-        guess1Square2.setBackgroundColor(ContextCompat.getColor(this, R.color.yellow));
-        guess1Square3.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
-        guess1Square4.setBackgroundColor(ContextCompat.getColor(this, R.color.green));
-        */
-        // TO DO: set backgrounds and texts according to answer submitted.
-
         // guess1Square1.setVisibility(TextView.INVISIBLE);
 
         // HashMap of the players is gets filled
         PlayersContainer.fillContainer(players);
 
-        generateRandomPlayerFromPlayerContainer(players);
+        resetGame();
 
-        if(edAnswer.getText() == selectedPlayer) {
-            isWinner = true;
-            // winner(); // winning position - open a dialog "you won" with a reset option ()
-        }
-        }
+        System.out.println(selectedPlayer); // TODO: Erase line after checking.
+    }
 
 
     @Override
@@ -177,30 +173,105 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
             finish();
         }
-        if (v == btnSubmitAnswer) {
+        if (v == btnSubmitAnswer && countGuesses == 0) {
             String name =  edAnswer.getText().toString();
-            edAnswer.setText("");
-            // TO DO: perform all the game actions for one guess at the time.
+
+            setSquaresTextAccordingToGuess(guess1Square1,  guess1Square2,  guess1Square3,
+                     guess1Square4, guess1Square5,  guess1Square6, guess1Square7, name, players);
+
+
+            setSquaresColorsAccordingToGuess(guess1Square4, guess1Square5,  guess1Square6, guess1Square7, name);
+
+            countGuesses++;
+            actIfWon();
+        }
+        if (v == btnSubmitAnswer && countGuesses == 1) {
+            String name =  edAnswer.getText().toString();
+
+            setSquaresTextAccordingToGuess(guess2Square1,  guess2Square2,  guess2Square3,
+                    guess2Square4, guess2Square5,  guess2Square6, guess2Square7, name, players);
+
+
+            setSquaresColorsAccordingToGuess(guess2Square4, guess2Square5,  guess2Square6, guess2Square7, name);
+
+            countGuesses++;
+            actIfWon();
+        }
+        if (v == btnSubmitAnswer && countGuesses == 2) {
+            String name =  edAnswer.getText().toString();
+
+            setSquaresTextAccordingToGuess(guess3Square1,  guess3Square2,  guess3Square3,
+                    guess3Square4, guess3Square5,  guess3Square6, guess3Square7, name, players);
+
+
+            setSquaresColorsAccordingToGuess(guess3Square4, guess3Square5,  guess3Square6, guess3Square7, name);
+
+            countGuesses++;
+            actIfWon();
+        }
+        if (v == btnSubmitAnswer && countGuesses == 3) {
+            String name =  edAnswer.getText().toString();
+
+            setSquaresTextAccordingToGuess(guess4Square1,  guess4Square2,  guess4Square3,
+                    guess4Square4, guess4Square5, guess4Square6, guess4Square7, name, players);
+
+
+            setSquaresColorsAccordingToGuess(guess4Square4, guess4Square5, guess4Square6, guess4Square7, name);
+
+            countGuesses++;
+            actIfWon();
+        }
+        if (v == btnSubmitAnswer && countGuesses == 4) {
+            String name =  edAnswer.getText().toString();
+
+            setSquaresTextAccordingToGuess(guess5Square1,  guess5Square2,  guess5Square3,
+                    guess5Square4, guess5Square5,  guess5Square6, guess5Square7, name, players);
+
+
+            setSquaresColorsAccordingToGuess(guess5Square4, guess5Square5,  guess5Square6, guess5Square7, name);
+
+            countGuesses++;
+            actIfWon();
+        }
+        if (v == btnSubmitAnswer && countGuesses == 5) {
+            String name =  edAnswer.getText().toString();
+
+            setSquaresTextAccordingToGuess(guess6Square1,  guess6Square2,  guess6Square3,
+                    guess6Square4, guess6Square5,  guess6Square6, guess6Square7, name, players);
+
+
+            setSquaresColorsAccordingToGuess(guess6Square4, guess6Square5,  guess6Square6, guess6Square7, name);
+
+            countGuesses++;
+            actIfWon();
+        }
+        if (v == btnSubmitAnswer && countGuesses == 6) {
+            String name =  edAnswer.getText().toString();
+
+            setSquaresTextAccordingToGuess(guess7Square1,  guess7Square2,  guess7Square3,
+                    guess7Square4, guess7Square5,  guess7Square6, guess7Square7, name, players);
+
+
+            setSquaresColorsAccordingToGuess(guess7Square4, guess7Square5,  guess7Square6, guess7Square7, name);
+
+            if(actIfWon() == 0)
+                actIfLost();
         }
     }
 
-    public boolean checkIfPlayerIsTheSelectedPlayer(NbaPlayer selectedPlayer)
-    {
-        for (Map.Entry<String, NbaPlayer> entry : players.entrySet()) {
-            if (entry.getValue().equals(selectedPlayer))
-                return true;
-        }
-        return false;
-    }
+//    public boolean checkIfPlayerIsTheSelectedPlayer(NbaPlayer selectedPlayer)
+//    {
+//        for (Map.Entry<String, NbaPlayer> entry : players.entrySet()) {
+//            if (entry.getValue().equals(selectedPlayer))
+//                return true;
+//        }
+//        return false;
+//    }
     public void resetGame()
     {
-        List<String> keysAsArray = new ArrayList<>(players.keySet());
-        Random random = new Random();
-        selectedPlayer = players.get(keysAsArray.get(random.nextInt(keysAsArray.size())));
+         selectedPlayer = generateRandomPlayerFromPlayerContainer(players);
 
-        // TO DO: set all the text views text and color to white and no text.
          guess1Square1.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess1Square1.setText("");
          guess1Square3.setBackgroundColor(Color.parseColor("#FFFFFF"));
          guess1Square4.setBackgroundColor(Color.parseColor("#FFFFFF"));
          guess1Square5.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -250,6 +321,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
          guess7Square6.setBackgroundColor(Color.parseColor("#FFFFFF"));
          guess7Square7.setBackgroundColor(Color.parseColor("#FFFFFF"));
 
+         guess1Square1.setText("");
          guess1Square2.setText("");
          guess1Square3.setText("");
          guess1Square4.setText("");
@@ -299,33 +371,11 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
          guess7Square6.setText("");
          guess7Square7.setText("");
     }
-    // checks if a square a field (in square) is correct.
-    public boolean checkIfCorrectAnswer()
+    public boolean checkIfWinner(Map.Entry<String, NbaPlayer> name) // name of a player from container (hashmap key)
     {
-        return true;
-    }
-    public boolean checkIfWinner(String name) // name of a player from container (hashmap key)
-    {
-        return true;
-    }
-
-    // Sets color and text to a square according to name of player guessed, quess index
-    // and square.
-    public void setSquareColorAndText(String name, TextView guess_XSquare_X, int quess, int square)
-    // name of a player from container (hashmap key)
-    {
-        //guess_XSquare_X.setBackgroundColor(checkIfCorrectAnswer(name));
-        // guess_XSquare_X.setText(); // TODO: Check which square it is! (according to the square you
-        // are going to know which property to set the text of)
-    }
-
-    // Check which square it is according to the square you
-    // are going to know which property to set the text of.
-    public int[] returnTextViewQuessAndSquareIndexes(TextView guess_XSquare_X)
-    {
-        int[] indexes = new int[2];
-        // TODO: Comlete the function!
-        return indexes;
+        if(edAnswer.getText().equals(name))
+            return true;
+        return false;
     }
 
     public NbaPlayer generateRandomPlayerFromPlayerContainer(HashMap<String, NbaPlayer> players)
@@ -334,9 +384,109 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         Random random = new Random();
         selectedPlayer = players.get(keysAsArray.get(random.nextInt(keysAsArray.size())));
 
-        return  selectedPlayer;
+        return selectedPlayer;
     }
 
+    public void setSquaresTextAccordingToGuess(TextView square1, TextView square2, TextView square3,
+                                               TextView square4, TextView square5, TextView square6,
+                                               TextView square7, String name,
+                                                 HashMap<String, NbaPlayer> players)
+    {
+        square1.setText(players.get(name).getTeam());
+        square2.setText(players.get(name).getConference().toString());
+        square3.setText(players.get(name).getDivision().toString());
+        square4.setText(players.get(name).getPosition().toString());
+        square5.setText(players.get(name).getHeight());
+        square6.setText(players.get(name).getAge());
+        square7.setText(players.get(name).getJerseyNumber());
+    }
 
+    public void setSquaresColorsAccordingToGuess(TextView square4, TextView square5, TextView square6,
+                                                 TextView square7, String name)
+    {
+        if(Math.abs(getPositionMargin(square4, name)) == 0)
+            square4.setBackgroundColor(Color.parseColor("#FFFFFF"));
+        if(Math.abs(getPositionMargin(square4, name)) == 1 || Math.abs(getPositionMargin(square4, name)) == 2)
+            square4.setBackgroundColor(ContextCompat.getColor(this, R.color.yellow));
+        if(Math.abs(getPositionMargin(square4, name)) > 2)
+            square4.setBackgroundColor(ContextCompat.getColor(this, R.color.green));
+        if(Math.abs(getHeightMargin(square5, name)) == 0)
+            square5.setBackgroundColor(Color.parseColor("#FFFFFF"));
+        if(Math.abs(getHeightMargin(square5, name)) == 1 || Math.abs(getHeightMargin(square5, name)) == 2)
+            square5.setBackgroundColor(ContextCompat.getColor(this, R.color.yellow));
+        if(Math.abs(getHeightMargin(square5, name)) > 2)
+            square5.setBackgroundColor(ContextCompat.getColor(this, R.color.green));
+        if(Math.abs(getAgeMargin(square6, name)) == 0)
+            square6.setBackgroundColor(Color.parseColor("#FFFFFF"));
+        if(Math.abs(getAgeMargin(square6, name)) == 1 || Math.abs(getAgeMargin(square6, name)) == 2)
+            square6.setBackgroundColor(ContextCompat.getColor(this, R.color.yellow));
+        if(Math.abs(getAgeMargin(square6, name)) > 2)
+            square6.setBackgroundColor(ContextCompat.getColor(this, R.color.green));
+        if(Math.abs(getJerseyNumberMargin(square7, name)) == 0)
+            square7.setBackgroundColor(Color.parseColor("#FFFFFF"));
+        if(Math.abs(getJerseyNumberMargin(square7, name)) == 1 || Math.abs(getJerseyNumberMargin(square7, name)) == 2)
+            square7.setBackgroundColor(ContextCompat.getColor(this, R.color.yellow));
+        if(Math.abs(getJerseyNumberMargin(square7, name)) > 2)
+            square7.setBackgroundColor(ContextCompat.getColor(this, R.color.green));
+    }
+
+    public int getAgeMargin(TextView square, String name)
+    {
+        int margin = 0;
+        margin = players.get(edAnswer.getText()).getAge() - players.get(name).getAge();
+        return margin;
+    }
+    public int getHeightMargin(TextView square, String name)
+    {
+        int margin = 0;
+        margin = Integer.parseInt(players.get(edAnswer.getText()).getHeight()) -
+                Integer.parseInt(players.get(name).getHeight());
+        return margin;
+    }
+    public int getJerseyNumberMargin(TextView square, String name)
+    {
+        int margin = 0;
+        margin = players.get(edAnswer.getText()).getJerseyNumber() - players.get(name).getJerseyNumber();
+        return margin;
+    }
+    public int getPositionMargin(TextView square, String name)
+    {
+        int margin = 0;
+        margin = PositionIndex(players.get(edAnswer.getText()).getPosition()) -
+                PositionIndex(players.get(name).getPosition());
+        return margin;
+    }
+    public int PositionIndex(Enum Position)
+    {
+        if(Position == PG)
+            return 1;
+        if(Position == SG)
+            return 2;
+        if(Position == SF)
+            return 3;
+        if(Position == PF)
+            return 4;
+        else
+            return 5;
+    }
+    public int actIfWon()
+    {
+        for (Map.Entry<String, NbaPlayer> entry : players.entrySet()) {
+            // if give value is equal to value from entry
+            if (entry.getValue() == selectedPlayer) {
+                if (checkIfWinner(entry) == true) {
+                    System.out.println("You Won!!!"); // TODO: Change to opening a winning dialog!
+                    resetGame();
+                }
+                break;
+            }
+        }
+        return 0;
+    }
+    public void actIfLost()
+    {
+        System.out.println("You Lost ):"); // TODO: Change to opening a Losing dialog!
+        resetGame();
+    }
 
 }
