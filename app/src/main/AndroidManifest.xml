@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyPoltel">
         <activity
-            android:name=".GameActivity"
+            android:name="com.example.GameActivity"
             android:exported="false" />
         <activity
-            android:name=".AboutGameActivity"
+            android:name="com.example.AboutGameActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

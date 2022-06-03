@@ -177,7 +177,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             String name =  edAnswer.getText().toString();
 
             setSquaresTextAccordingToGuess(guess1Square1,  guess1Square2,  guess1Square3,
-                     guess1Square4, guess1Square5,  guess1Square6, guess1Square7, name, players);
+                     guess1Square4, guess1Square5,  guess1Square6, guess1Square7, name);
 
 
             setSquaresColorsAccordingToGuess(guess1Square4, guess1Square5,  guess1Square6, guess1Square7, name);
@@ -189,7 +189,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             String name =  edAnswer.getText().toString();
 
             setSquaresTextAccordingToGuess(guess2Square1,  guess2Square2,  guess2Square3,
-                    guess2Square4, guess2Square5,  guess2Square6, guess2Square7, name, players);
+                    guess2Square4, guess2Square5,  guess2Square6, guess2Square7, name);
 
 
             setSquaresColorsAccordingToGuess(guess2Square4, guess2Square5,  guess2Square6, guess2Square7, name);
@@ -201,7 +201,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             String name =  edAnswer.getText().toString();
 
             setSquaresTextAccordingToGuess(guess3Square1,  guess3Square2,  guess3Square3,
-                    guess3Square4, guess3Square5,  guess3Square6, guess3Square7, name, players);
+                    guess3Square4, guess3Square5,  guess3Square6, guess3Square7, name);
 
 
             setSquaresColorsAccordingToGuess(guess3Square4, guess3Square5,  guess3Square6, guess3Square7, name);
@@ -213,7 +213,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             String name =  edAnswer.getText().toString();
 
             setSquaresTextAccordingToGuess(guess4Square1,  guess4Square2,  guess4Square3,
-                    guess4Square4, guess4Square5, guess4Square6, guess4Square7, name, players);
+                    guess4Square4, guess4Square5, guess4Square6, guess4Square7, name);
 
 
             setSquaresColorsAccordingToGuess(guess4Square4, guess4Square5, guess4Square6, guess4Square7, name);
@@ -225,7 +225,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             String name =  edAnswer.getText().toString();
 
             setSquaresTextAccordingToGuess(guess5Square1,  guess5Square2,  guess5Square3,
-                    guess5Square4, guess5Square5,  guess5Square6, guess5Square7, name, players);
+                    guess5Square4, guess5Square5,  guess5Square6, guess5Square7, name);
 
 
             setSquaresColorsAccordingToGuess(guess5Square4, guess5Square5,  guess5Square6, guess5Square7, name);
@@ -237,7 +237,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             String name =  edAnswer.getText().toString();
 
             setSquaresTextAccordingToGuess(guess6Square1,  guess6Square2,  guess6Square3,
-                    guess6Square4, guess6Square5,  guess6Square6, guess6Square7, name, players);
+                    guess6Square4, guess6Square5,  guess6Square6, guess6Square7, name);
 
 
             setSquaresColorsAccordingToGuess(guess6Square4, guess6Square5,  guess6Square6, guess6Square7, name);
@@ -249,7 +249,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             String name =  edAnswer.getText().toString();
 
             setSquaresTextAccordingToGuess(guess7Square1,  guess7Square2,  guess7Square3,
-                    guess7Square4, guess7Square5,  guess7Square6, guess7Square7, name, players);
+                    guess7Square4, guess7Square5,  guess7Square6, guess7Square7, name);
 
 
             setSquaresColorsAccordingToGuess(guess7Square4, guess7Square5,  guess7Square6, guess7Square7, name);
@@ -271,55 +271,55 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     {
          selectedPlayer = generateRandomPlayerFromPlayerContainer(players);
 
-         guess1Square1.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess1Square3.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess1Square4.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess1Square5.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess1Square2.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess1Square6.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess1Square7.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess2Square1.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess2Square2.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess2Square3.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess2Square4.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess2Square5.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess2Square6.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess2Square7.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess3Square1.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess3Square2.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess3Square3.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess3Square4.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess3Square5.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess3Square6.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess3Square7.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess4Square1.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess4Square2.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess4Square3.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess4Square4.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess4Square5.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess4Square6.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess4Square7.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess5Square1.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess5Square2.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess5Square3.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess5Square4.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess5Square5.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess5Square6.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess5Square7.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess6Square1.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess6Square2.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess6Square3.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess6Square4.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess6Square5.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess6Square6.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess6Square7.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess7Square1.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess7Square2.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess7Square3.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess7Square4.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess7Square5.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess7Square6.setBackgroundColor(Color.parseColor("#FFFFFF"));
-         guess7Square7.setBackgroundColor(Color.parseColor("#FFFFFF"));
+         guess1Square1.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess1Square3.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess1Square4.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess1Square5.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess1Square2.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess1Square6.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess1Square7.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess2Square1.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess2Square2.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess2Square3.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess2Square4.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess2Square5.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess2Square6.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess2Square7.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess3Square1.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess3Square2.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess3Square3.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess3Square4.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess3Square5.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess3Square6.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess3Square7.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess4Square1.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess4Square2.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess4Square3.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess4Square4.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess4Square5.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess4Square6.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess4Square7.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess5Square1.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess5Square2.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess5Square3.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess5Square4.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess5Square5.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess5Square6.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess5Square7.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess6Square1.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess6Square2.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess6Square3.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess6Square4.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess6Square5.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess6Square6.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess6Square7.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess7Square1.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess7Square2.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess7Square3.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess7Square4.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess7Square5.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess7Square6.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+         guess7Square7.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
 
          guess1Square1.setText("");
          guess1Square2.setText("");
@@ -389,41 +389,40 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     public void setSquaresTextAccordingToGuess(TextView square1, TextView square2, TextView square3,
                                                TextView square4, TextView square5, TextView square6,
-                                               TextView square7, String name,
-                                                 HashMap<String, NbaPlayer> players)
+                                               TextView square7, String name)
     {
         square1.setText(players.get(name).getTeam());
         square2.setText(players.get(name).getConference().toString());
         square3.setText(players.get(name).getDivision().toString());
         square4.setText(players.get(name).getPosition().toString());
         square5.setText(players.get(name).getHeight());
-        square6.setText(players.get(name).getAge());
-        square7.setText(players.get(name).getJerseyNumber());
+        square6.setText(String.valueOf((players.get(name).getAge())));
+        square7.setText(String.valueOf(players.get(name).getJerseyNumber()));
     }
 
     public void setSquaresColorsAccordingToGuess(TextView square4, TextView square5, TextView square6,
                                                  TextView square7, String name)
     {
         if(Math.abs(getPositionMargin(square4, name)) == 0)
-            square4.setBackgroundColor(Color.parseColor("#FFFFFF"));
+            square4.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
         if(Math.abs(getPositionMargin(square4, name)) == 1 || Math.abs(getPositionMargin(square4, name)) == 2)
             square4.setBackgroundColor(ContextCompat.getColor(this, R.color.yellow));
         if(Math.abs(getPositionMargin(square4, name)) > 2)
             square4.setBackgroundColor(ContextCompat.getColor(this, R.color.green));
         if(Math.abs(getHeightMargin(square5, name)) == 0)
-            square5.setBackgroundColor(Color.parseColor("#FFFFFF"));
+            square5.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
         if(Math.abs(getHeightMargin(square5, name)) == 1 || Math.abs(getHeightMargin(square5, name)) == 2)
             square5.setBackgroundColor(ContextCompat.getColor(this, R.color.yellow));
         if(Math.abs(getHeightMargin(square5, name)) > 2)
             square5.setBackgroundColor(ContextCompat.getColor(this, R.color.green));
         if(Math.abs(getAgeMargin(square6, name)) == 0)
-            square6.setBackgroundColor(Color.parseColor("#FFFFFF"));
+            square6.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
         if(Math.abs(getAgeMargin(square6, name)) == 1 || Math.abs(getAgeMargin(square6, name)) == 2)
             square6.setBackgroundColor(ContextCompat.getColor(this, R.color.yellow));
         if(Math.abs(getAgeMargin(square6, name)) > 2)
             square6.setBackgroundColor(ContextCompat.getColor(this, R.color.green));
         if(Math.abs(getJerseyNumberMargin(square7, name)) == 0)
-            square7.setBackgroundColor(Color.parseColor("#FFFFFF"));
+            square7.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
         if(Math.abs(getJerseyNumberMargin(square7, name)) == 1 || Math.abs(getJerseyNumberMargin(square7, name)) == 2)
             square7.setBackgroundColor(ContextCompat.getColor(this, R.color.yellow));
         if(Math.abs(getJerseyNumberMargin(square7, name)) > 2)
